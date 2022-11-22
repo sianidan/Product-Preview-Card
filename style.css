@@ -1,0 +1,163 @@
+/* RESETS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100vh;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+    background: hsl(30, 38%, 92%);
+    font-size: 14px;
+}
+
+h1, h2 {
+    font-family: 'Fraunces', serif;
+}
+
+p, button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 45%;
+    display: flex;
+    background: white;
+    border-radius: .5em;
+}
+
+.imgDesktop {
+    width: 50%;
+    border-radius: .5em 0 0 .5em;
+}
+
+.imgMobile {
+    width: 100%;
+    border-radius: .5em .5em 0 0;
+}
+
+.right {
+    padding: 2em;
+}
+
+.topText {
+    color: hsl(228, 12%, 48%);
+    letter-spacing: .5em;
+    font-size: .7em;
+}
+
+.right h1 {
+    font-size: 2em;
+    color: hsl(212, 21%, 14%);
+    padding: .5em 1em .5em 0;
+}
+
+.description {
+    color: hsl(228, 12%, 48%);
+    line-height: 1.8;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    padding: 1.5em 0;
+    gap: 1em;
+}
+
+.price h2 {
+    font-size: 2em;
+    color: hsl(158, 36%, 37%);
+}
+
+.price p {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+.addToCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background: hsl(158, 36%, 37%);
+    color: white;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    border-radius: .5em;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.addToCart:hover {
+    background: hsl(158, 36%, 25%);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    padding-top: .5em;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media screen and (max-width:1023px) {
+    .imgDesktop { 
+        display: none !important;
+    }
+    .imgMobile { 
+        display: block !important;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .imgDesktop { 
+        display: none !important;
+    }
+    .imgMobile { 
+        display: block !important;
+    }
+
+    .container {
+        font-size: .8em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .imgDesktop { 
+        display: block !important;    
+    }
+    .imgMobile {
+        display: none !important;
+    }
+}
