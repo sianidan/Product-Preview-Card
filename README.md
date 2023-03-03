@@ -41,23 +41,18 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS Flexbox
-- Mobile-first workflow
 
 ### What I learned
 
-The major thing I learned while completing this project was how to switch images based on browser/viewport size using media queries.
+The major thing I learned while completing this project was how to switch images based on browser size. 
 
-Here's one example of what I included in a media query:
+In my first version of this solution, I included both the desktop and mobile images in their on ```img``` tags in my HTML. Then I used media queries to display or hide the images depending on the browser width. For my second attempt, I switched to the ```picture``` element and its corresponding elements/attributes. The MDN has an article about this topic, which I linked below.
 
-```css
-@media screen and (max-width:1023px) {
-    .imgDesktop { 
-        display: none !important;
-    }
-    .imgMobile { 
-        display: block !important;
-    }
-}
+```html
+<picture class="img">
+        <source class="imgMobile" media="(max-width: 700px) and (min-height: 640px)" srcset="./images/mobile.jpg 686w" />
+        <img src="./images/desktop.jpg" alt="Glass bottle of Chanel Gabrielle Perfume">
+      </picture>
 ```
 
 ### Continued development
@@ -66,7 +61,7 @@ Moving forward, I want to keep learning and practicing methods to make each proj
 
 ### Useful resources
 
-- [Changing images for responsive design](https://stackoverflow.com/questions/52172451/media-queries-to-change-image) - The helpful answers to OP's question were the reason I figured out how to switch the main image using media queries.
+- [Changing images for responsive design](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) - This MDN article describes in depth how to use the ```img``` or ```picture``` elements and their attributes in order to make images responsive.
 
 - [Responsive images cont.](https://css-tricks.com/responsive-images-css/) - This is another really good resource for making images responsive in HTML and CSS. 
 

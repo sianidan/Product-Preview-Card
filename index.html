@@ -8,7 +8,7 @@
   <title>Frontend Mentor | Product preview card component</title>
   <link rel="stylesheet" href="style.css">
 
-  <!--------FONTS--------->
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
@@ -16,12 +16,14 @@
 <body>
   <main>
     <article class="container">
-      <img class="imgDesktop" src="./images/image-product-desktop.jpg" alt="Glass bottle of Chanel Gabrielle Perfume">
-      <img src="./images/image-product-mobile.jpg" alt="Glass bottle of Chanel Gabrielle perfume" class="imgMobile">
+      <picture class="img">
+        <source class="imgMobile" media="(max-width: 700px) and (min-height: 640px)" srcset="./images/mobile.jpg 686w" />
+        <img src="./images/desktop.jpg" alt="Glass bottle of Chanel Gabrielle Perfume">
+      </picture>
 
       <article class="right">
         <p class="topText">PERFUME</p>
-        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <h2>Gabrielle Essence Eau De Parfum</h2>
         <p class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
 
        <div class="price">
@@ -29,7 +31,7 @@
          <p>$169.99</p>
         </div>
 
-        <button class="addToCart">
+        <button type="button" class="addToCart">
          <img src="./images/icon-cart.svg" alt="white cart icon"> Add to Cart
         </button>
       </article>
